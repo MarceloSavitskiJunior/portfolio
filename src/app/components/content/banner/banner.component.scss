@@ -1,0 +1,91 @@
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: calc(100vh - 100px);
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-md-12 {
+    text-align: center;
+}
+
+.banner {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.banner__content {
+    margin: 20px;
+}
+
+.banner__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.banner__description {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.banner__button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.banner__button:hover {
+    background-color: #0056b3;
+}
+
+.accordion {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.accordion__item {
+    border-top: 1px solid #ccc;
+}
+
+.accordion__title {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.accordion__title:hover {
+    background-color: #eaeaea;
+}
+
+.accordion__content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out, transform 0.3s ease-out; /* Adicionando transição para a propriedade 'transform' */
+    transform-origin: bottom; /* Define a origem da transformação no fundo do elemento */
+}
+
+.accordion__content--open {
+    max-height: 500px; /* Altura máxima do conteúdo quando aberto */
+    transition: max-height 0.3s ease-out; /* Mesma transição de 0.3 segundos */
+    transform: scale(1);
+}
+
+/* Estilos para mostrar e esconder conteúdo quando um item é clicado */
+.accordion__item.active .accordion__content {
+    display: block;
+}
